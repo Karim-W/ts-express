@@ -18,4 +18,7 @@ export default class Logger {
   debug(message: string, ...args: any[]) {
     console.log(this.colors.debug, message, ...args);
   }
+  announce(message: string, ...args: any[]) {
+    console.log(message, ...args);
+  }
 }

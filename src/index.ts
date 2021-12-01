@@ -4,7 +4,9 @@ import config from "./Config/ServerConfig";
 
 let logger = new Logger();
 let server = expressApp.listen(config.port, () => {
-  logger.info(`Listening to port ${config.port}`);
+  logger.announce(
+    `🧼🧼🧼Server is currently Listening on the following the URL: http://localhost:${config.port} 🧼🧼🧼`
+  );
 });
 const exitHandler = () => {
   if (server) {
