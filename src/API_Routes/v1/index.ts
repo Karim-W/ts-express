@@ -1,6 +1,9 @@
+import "reflect-metadata";
 import { Router } from "express";
+
 // import helloRoute from "./hello.route";
 const helloRoute = require("./hello.route");
+const usersRoute = require("./users.route");
 // import docs from './docs';
 import config from "../../Config/ServerConfig";
 const router = Router();
@@ -9,6 +12,10 @@ const defaultRoutes = [
   {
     path: "/hello",
     route: helloRoute,
+  },
+  {
+    path: "/users",
+    route: usersRoute,
   },
 ];
 // const devRoutes = [

@@ -1,3 +1,4 @@
+import "reflect-metadata";
 import Logger from "./Utils/Logging";
 import expressApp from "./ExpressApp";
 import config from "./Config/ServerConfig";
@@ -5,7 +6,7 @@ import config from "./Config/ServerConfig";
 let logger = new Logger();
 let server = expressApp.listen(config.port, () => {
   logger.announce(
-    `🧼🧼🧼Server is currently Listening on the following the URL: http://localhost:${config.port} 🧼🧼🧼`
+    `Server is currently Listening on the following the URL: http://localhost:${config.port} 🧼🧼🧼`
   );
 });
 const exitHandler = () => {
